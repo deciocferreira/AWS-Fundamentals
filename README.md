@@ -1,11 +1,100 @@
 # AWS Fundamentals  <image src="https://user-images.githubusercontent.com/12403699/234434276-e7cdcab8-c594-47a6-8862-7645e5740a2c.png" width="80" height="50">  
 
+## O que é Cloud? 
+É uma tecnologia de computação em que recursos de infraestrutura, como servidores, armazenamento e software, são fornecidos pela Internet através de uma plataforma de serviços ou por uma rede privada, com entrega sob demanda, onde os usuários podem acessar esses recursos sem gerenciamento ativo e pagar apenas pelo que usam, em vez de ter que investir em infraestrutura de TI própria.  
 
-##O que é Nuvem? 
-É uma tecnologia de computação em que os recursos de infraestrutura, como servidores, armazenamento e software, são fornecidos pela Internet ou por uma rede privada. 
-Os usuários podem acessar esses recursos sob demanda e pagar apenas pelo que usam, em vez de ter que investir em infraestrutura de TI própria.
+Usamos nuvem todos os dias!
+
+- Netflix
+- Spotify
+- Google Drive
+- Office 365
+- Armazenamento de fotos online
+
+## Estamos em transição
+As empresas estão cada vez mais migrando sua infra para Cloud, algumas de forma híbrida.
+
+## Visão Geral da AWS
+
+*Compute*
+ - EC2
+ - Amazon EC2 Auto Scaling
+ - AWS Classic Beanstalk
+ - AWS Lambda
+
+*Networking e Content Delivery*
+ - Amazon VPC Amazon Route 53
+ - Amazon CloudFront 
+ - Elastic load balancing 
+
+*Governance & Management*
+ - Amazon CloudWatch
+ - AWS autoScaling 
+ - AWS Trusted Advisor
+ - AWS Organizalions
+ - AWS CloudFormation
+ - AWS COnfig 
+ - AWS CloudTrail
+
+*Database*
+ - Amazon RDS
+ - Amazon DynamoDB
+ - Amazon Aurora
+ - Amazon DocumentDB
+ - Amazon Redshift
+ - Amazon Neptune
+ - Amazon ElastiCache
+
+*Security, Identity & compilance*
+ - AWS Identify & Acess management(IAM)
+ - AWS WAF
+ - Aws Shield 
+ - AWS Artifact
+
+## Vantagens de Cloud Computing:
+
+*Economia*:
+Despesas variáveis - Fazendo uma analogia como se fosse a luz da sua casa, quanto mais eu utilizo mais eu gasto, caso eu deixe a luz apagada eu não gasto. Em nuvem pagamos apenas pelo que usamos. (Pay-as-you-Go)
+
+Grandes economias em escala - Quanto mais clientes AWS possui, mais barato o serviço sai para o cliente no final.
+
+Pare de fazer suposições: Compras de servidores e infraestrutura(redução de Capex).
+
+*Aumente a velocidade e a agilidade*:
+Nuvem permite que você tenha mais velocidade e desempenho em suas aplicações em tipos de máquinas diferentes. *Time to Marketing*.
+
+*Torne-se Global*:
+Permite que o negócio se torne global em pouco tempo, diminuindo a latencia do seu negócio em servidores em vários cantos no mundo.
+
+
+## Modelos de serviço de Cloud
+
+*IaaS* Infraestructure as a service
+ - Servers
+ - Storage
+ - Network
+ [Hospedar]
+
+*PaaS* Platform as a service 
+ - O/S
+- Servers
+- Storage
+- Network
+[Programar]
+
+*SaaS* Software as a service 
+- APP
+- Dados
+- O/S
+- Servers
+- Storage
+- Network
+[Usar a aplicação pronta em um modelo de Opex]
+
+<image src="https://user-images.githubusercontent.com/12403699/234436596-8dd96d37-dd6b-456e-938a-5dc61d1ad733.png" width="700" height="400">  
 
 Escalabilidade - aumento de instâncias para determinada workload.
+
 
 Elasticidade - aumento de recursos computacionais para determinado workload.
   
@@ -16,131 +105,9 @@ Região> Az> Edge Location, funciona assim
 <image src="https://user-images.githubusercontent.com/12403699/234436103-3ee9e550-8a2c-4d38-b581-d060f3037890.png" width="800" height="450">
   
 ## *Shared responsability* 
-  
-<image src="https://user-images.githubusercontent.com/12403699/234436596-8dd96d37-dd6b-456e-938a-5dc61d1ad733.png" width="700" height="400">  
-
-  Enquanto a AWS gerencia a segurança da Nuvem
-Você é responsável pela segurança na nuvem
+O Provedor sempre tem uma parcela da responsabilidade e o cliente também.  Enquanto a AWS gerencia a segurança da NuvemVocê é responsável pela segurança na nuvem
   Guia do exame:
 aws.amazon.com
-
-Vá no aprenda
-Explorar certificações da AWS
-Baixe o guia dos exame.
-
-Visão Geral AWS
-Computação
-FC2
-Amazon FC2 Auto Scaling
-AWS Classic Beanstalk
-AWS Lambda
-
-Redes e entrega de conteúdo
-Amazon VPC Amazon Route 53
-Amazon CloudFront 
-Balic load balancing 
-
-Gerenciamento e Governança
-Amazon CloudWatch
-AWS autoScaling 
-AWS Trusted Advisor
-AWS Organizalions
-AWS CloudFormation
-AWS COnfig 
-AWS CloudTrail
-
-Banco de dados
-Amazon RDS
-
-Amazon DynamoDB
-
-Segurança, identidade e compilance
-AWS Identify & Acess management
-AWS WAF
-Aws Shield 
-AWS Artifact
-
-
-O que é computação na nuvem:
-Falou em AWS falou em Cloud
-
-"É a entrega sob demanda de recursos computacionais, através de uma plataforma de serviços via internet, sem o gerenciamento ativo do usuário."
-
-Usamos nuvem todos os dias
-Netflix
-whatsapp
-Google Drive
-
-
-Responsabilidade compartilhada:
-O Provedor sempre tem uma parcela da responsabilidade e o cliente também.
-
-
-Estamos em transição
-As empresas estão cada vez mais utilizando a nuvem, algumas roda de forma híbrida 
-
-
-Um Novo ambiente:
-Para aqueles profissionais que já atuam na área de TI, esse novo ambiente não seja tão novo ainda.
-
-
-Seis vantagens da computação na nuvem:
-
-Economize
-
-Despesas variáveis: Permite que trate a infraestrutura como se fosse a luz da sua casa, quanto mais eu utilizo mais eu gasto, caso eu deixe a luz apagada eu não gasto.
-
-
-Aumente a velocidade e a agilidade:
-Nuvem permite que você tenha mais velocidade e desempenho em suas aplicações em tipos de máquinas diferentes. Time to Marketing.
-
-Pare de fazer suposições: Suposições de compras de servidores e infraestrutura.
-
-Grandes economias em escala: Quanto mais clientes AWS possui, mais barato o serviço sai para o cliente
-
-Torne-se Global:Permite que o negócio se torne global e internacional, diminuindo a latencia do seu negócio em servidores em vários cantos no mundo.
-
-
-IaaS:
-Infraestrutura como serviço. (Amazon EC2)
-Servers
-Storage
-Network
-[Hospedar]
-
-PaaS:
-Plataforma como serviço (Só preocupa com sua aplicação)
-O/S
-Servers
-Storage
-Network
-[Programar]
-
- 
-& SaaS
-Sofware como serviço (Netflix)
-APP
-Dados
-O/S
-Servers
-Storage
-Network
-[Usar]
-
-
-Veja um exemplo como uma Pizza:
-
-
-Tradicional: Fazer em casa.
-
-IaaS: Comprar no Mercado
-
-
-PaaS: Pedir no aplicativo ou no telefone.
-
-
-SaaS: Jantar fora.
-
 
 Escalabilidade % Elasticidade:
 
@@ -267,6 +234,8 @@ Security in the cloud é responsabilidade do Customer.
 
 Um recurso deixa de ser gerenciado por você quando a outra parte inica o gerenciamento, as atualizações, a manutenção do sistema operacional e a segurança. 
   
-##Certificação
+## Referências
 
 *https://aws.amazon.com/pt/certification/certified-cloud-practitioner/*
+*https://aws.amazon.com/pt/products/*
+*https://aws.amazon.com/pt/serverless/*
