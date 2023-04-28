@@ -38,11 +38,15 @@
   
 ## Cost Management
   
-  *AWS Budgets* Definir orçamentos personalizados para controlar os custos de Cloud. Configuração de alertas por E-mail ou notificação SNS quando o custo real ou previsto e o uso excederem ou estiver aproximando do limite do seu orçamento.
+  *AWS Budgets* &nbsp;
+  
+  Definir orçamentos personalizados para controlar os custos de Cloud. Configuração de alertas por E-mail ou notificação SNS quando o custo real ou previsto e o uso excederem ou estiver aproximando do limite do seu orçamento.
   
 <image src="https://user-images.githubusercontent.com/12403699/235014921-dbe19c29-c506-4ec0-8fc1-aac5290461b4.png" width="800" height="450">
 
-  *Cost Explorer* Serviço que possibilita que você visualizar seus custos na nuvem de forma detalhada. Ele tem uma interace que mostra esse gerenciamento ao longo do tempo, de forma granular.
+  *Cost Explorer* &nbsp;
+  
+  Serviço que possibilita que você visualizar seus custos na nuvem de forma detalhada. Ele tem uma interace que mostra esse gerenciamento ao longo do tempo, de forma granular.
   
 <image src="https://user-images.githubusercontent.com/12403699/235015328-ca5bdfff-447c-4e42-a562-52fc73d784d9.png" width="800" height="450">
   
