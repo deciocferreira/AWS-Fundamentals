@@ -49,7 +49,53 @@ processamento em tempo real de dado
 - Ideal para cargas de trabalho que exigem acesso de leitura e gravação com grande volume de dados. 
 - Casos de uso: Sistemas de arquivos distribuídos, Data warehouse, sistema de processamento de transações on-line.
   
+ ## **ELB – Elastic Load Balancing**
+- Balanceamento de carga de aplicação, gateway e rede
+- Escopo regional
+- Escala de forma automática, sem custos
+- Junto ao EC2 AutoScaling permite criar aplicações altamente
+disponíveis
   
+  
+## Mensageria
+  
+**Amazon Simple Queue Service**
+
+- Sistema de enfileiramento de mensagens
+- Um usuário envia uma mensagem para fila, o outro usuário lê, processa e a exclui da fila
+  
+**Amazon Simple Notification**
+
+- Sistema pub/sub
+- Utiliza tópicos como estrutura
+- Usuário publica mensagens no tópico e assinantes escutam
+  
+## Serverless  
+  
+  **AWS Lambda**
+- Execução de código sem provisionar servidores
+- Código organizado em funções
+- Você pode escolher a linguagem de programação de sua preferência
+- Executa a partir de eventos ou chamadas diretas a API do Lambda
+  
+<image src="https://user-images.githubusercontent.com/12403699/235768004-20a01695-4964-4589-9327-34434f509e61.png" width="450" height="450">  
+ 
+• ECR
+   
+<image src="https://user-images.githubusercontent.com/12403699/235768133-855666a9-9877-43c8-ae8d-57f44c4639bd.png" width="900" height="450">   
+  
+• ECS
+  
+<image src="https://user-images.githubusercontent.com/12403699/235768196-b73f5d59-e4ab-4823-945e-8242f641f77b.png" width="900" height="450">   
+
+• EKS
+  
+<image src="https://user-images.githubusercontent.com/12403699/235768238-738cafac-3c1a-45e7-952c-9648dafaaa99.png" width="900" height="450">   
+  
+• AWS Fargate
+  
+<image src="https://user-images.githubusercontent.com/12403699/235768291-069cea7f-579a-42ab-9fa5-96484ae8a59e.png" width="900" height="450">   
+    
 ## Referências
   
 *https://aws.amazon.com/pt/ec2/*
