@@ -71,8 +71,13 @@ Sempre teremos a capacidade de aumentar a quantidade de recursos que eu possa te
 Com isso, temos dois conceitos:
  
 **Escalabilidade** - aumento de instâncias para determinado workload.
+  - Provê escalabilidade horizontal para seus serviços
+  - Melhora a tolerância a falhas com identificação de instâncias indisponíveis e implantação multi-AZ
+  - Melhor gerenciamento de custos 
+  - Scaling Preditivo
+  - Scaling Dinâmico
 
-**Elasticidade** - aumento de recursos computacionais para determinado workload.
+ **Elasticidade** - aumento de recursos computacionais para determinado workload.
 
 E só será pago pelo que foi usado. Se a aplicação pode ir até 100 e foi utilizado 50, só se paga os 50. Podemos ainda escalar até o 100 sem que ela caia, tudo feito de forma automatizada. Exemplo: Otimizar a nível horizontal, sempre para criar cópias de várias maquinas para se ter mais instâncias para seu grupo, ou seja tem várias máquinas rodando sua aplicação, então 100 pessoas está na sua instância 1, então para balancear vai 50 para instância 2. 
 
