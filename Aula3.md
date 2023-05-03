@@ -1,6 +1,6 @@
 # AWS Fundamentals  <image src="https://user-images.githubusercontent.com/12403699/234434276-e7cdcab8-c594-47a6-8862-7645e5740a2c.png" width="60" height="50"> 
   
-## Security, Identity & Compute Services   
+## Security & Identity    
 
 *IAM - Identity and access management*
 
@@ -69,19 +69,3 @@ Versão Advanced
 - Suporte 24x7;
 - Proteção extra no serviços: *Amazon EC2, elastic load balancing (ELB), Amazon cloudfront, aws global accelerator
 e Route 53.*
-
-
-
-Nuvem virtual privada (VPC) é uma nuvem privada localizada dentro de uma nuvem pública, que torna possível desfrutar dos benefícios de uma rede virtualizada por meio de recursos de rede pública.
-
-
-A Virtualização hospedada isola os seus dados dos dados de outras empresas, tanto em trânsito quanto na rede do provedor da nuvem, ajudando a criar um ambiente mais seguro.
-A VPC conecta-se a redes remotas por meio de uma conexão de rede virtual privada (VPN). A VPC é ideal para empresas que buscam um alto nível de segurança, privacidade e controle, como organizações de assistência médica e financeiras que atendem a conformidades normativas. Para as empresas, a VPC é ideal também para executar aplicativos críticos para o negócio.
-
-Normalmente a VPC é gerenciada por meio do painel de controle do provedor de serviço gerenciado.
-A Janela da VPC permite que você consulte e faça as alterações necessárias de maneira simplificada.
-
-Importante TRABALHO: Ver o que rola quando a instância for fechada se o conteúdo dela é totalmente apagado ou fica armazenado.
-
-![image](https://user-images.githubusercontent.com/12403699/235812702-9f4b3249-b21d-4e6f-a7a3-6942a4485a59.png)
-![image](https://user-images.githubusercontent.com/12403699/235812727-bf52fca7-7ba4-4ad3-aeaf-afb9a7eb28c6.png)
