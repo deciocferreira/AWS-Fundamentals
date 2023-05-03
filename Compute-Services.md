@@ -4,6 +4,8 @@
   
 ## EC2 - *Elastic Compute Cloud*
   
+O Amazon EC2 é um serviço web que disponibiliza uma capacidade computacional segura, representado por uma instância redimensionável na nuvem. Modelo infrasestrutura como serviço - *IAAS*.  Armazenar dados em volumes virtuais EBS.  OS Windos, MacOs e Linux. Tem cobrança por hora ou segundo (Minimo de 60 segundos).
+    
 - Capacidade computacional segura e redimensionável
 - Computação: CPU, Memória, Rede, Armazenamento, Sistema operacional
 - Definição de preço conforme uso e modalidades específicas a necessidade
@@ -14,13 +16,18 @@
 - Servidor virtual na nuvem AWS
 - Possui configurações de memória, CPU, disco, rede e sistema operacional
   
-  ![image](https://user-images.githubusercontent.com/12403699/235537388-08d166e2-8867-481c-ab8a-69ced9af14bc.png)
-
-  *Tipos de instância*
-- Diferentes tipos para casos de uso diferentes
-- Várias combinações diferentes de configurações
+![image](https://user-images.githubusercontent.com/12403699/235537388-08d166e2-8867-481c-ab8a-69ced9af14bc.png)
+  
+*Tipos de instância*
+Há diferentes tipos para casos de uso diferentes com várias combinações diferentes de configurações.
    
-  *Uso geral*
+- *A, T, M, Mac*: Uso geral
+- *C*: Computação
+- *R,X,Z*: Memória
+- *P, inf, G, F, DL, Trnn, VT*: Processamento
+- *I, D, H*: Armazenamento
+  
+*Uso geral*
 - Otimizadas para computação
 - Otimizadas para memória
 - Computação acelerada
@@ -48,6 +55,25 @@ processamento em tempo real de dado
   
 - Ideal para cargas de trabalho que exigem acesso de leitura e gravação com grande volume de dados. 
 - Casos de uso: Sistemas de arquivos distribuídos, Data warehouse, sistema de processamento de transações on-line.
+  
+*Entendo a instância*
+
+*Tipo* = t2.2XLARGE
+
+*T2* = Segunda geração da familia T. *2* = Geração
+
+*Familia* - T2.
+
+*2xlarge* = Tamanho
+
+Tamanhos:
+*.nano
+.micro
+.small
+.medium
+.large
+.xlarge
+.metal* 
   
  ## **ELB – Elastic Load Balancing**
 - Balanceamento de carga de aplicação, gateway e rede
