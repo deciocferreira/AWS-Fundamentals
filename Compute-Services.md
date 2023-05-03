@@ -75,6 +75,8 @@ Tamanhos:
 .xlarge
 .metal* 
   
+![image](https://user-images.githubusercontent.com/12403699/235812727-bf52fca7-7ba4-4ad3-aeaf-afb9a7eb28c6.png)  
+  
  ## **ELB – Elastic Load Balancing**
 - Balanceamento de carga de aplicação, gateway e rede
 - Escopo regional
@@ -127,3 +129,4 @@ disponíveis
 *https://aws.amazon.com/pt/ec2/*
 *https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/concepts.html*
 *https://aws.amazon.com/pt/ec2/instance-types/*
+*https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/instance-types.html#instance-virtualization-type*
