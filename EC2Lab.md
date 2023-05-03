@@ -38,10 +38,30 @@ Após isso, dê um nome para o arquivo (.pem ou .ppk) e clique em create *Key pa
 8. Configure armazenmento EBS caso seja necessário e após isso, clique em *Launch instance* que o AWS fará o processo de criação e provisionamento na console.
   
 <image src="https://user-images.githubusercontent.com/12403699/236025028-9522b5d2-81eb-4737-997f-d30069601d73.png" width="300" height="500">
-
-## CLI
   
+ Pronto! Basta verificar a instância sendo executada no dashboard.
+
 ## Terraform (Iac)  
+  
+Para seguir com o Lab neste tipo de provisionamento, precisa ter o Terraform devidamente instalado no sistema operacional. 
+ Não iremos acessar a console para fazer as ações necessárias. Basta executar comando via terminal, neste caso é o *Powershell*.  
+  
+1. Verificar versão do Terraform
+  
+<image src="https://user-images.githubusercontent.com/12403699/236056351-b0c21a2d-3a52-43ae-80db-999303af160e.png" width="500" height="200"> 
+  
+2. Criar um diretório para o projeto e conectar via VS Code ou outra IDE de sua preferência. Após isso, criar um arquivo *main.tf* com as definições da instância EC2, no caso (2vCPU|4RAM), na região us-east-1, com um Security Group permissionado somente para a porta 443.
+
+<image src="https://user-images.githubusercontent.com/12403699/236056714-d683bde3-afa2-4bf5-85a6-0b3354f96b25.png" width="900" height="500"> 
+  
+3. Digitar o comando *terraform init* no terminal de comando para baixar os plugins necessários da AWS e preparar o ambiente para a execução dos demais comandos do Terraform. 
+ 
+<image src="https://user-images.githubusercontent.com/12403699/236057683-6096d5c7-fc17-4c41-a650-270c251769c5.png" width="900" height="500">
+  
+4. Revisar o arquivo .tf e certificado que tudo está correto, executar o comando *terraform apply* para que seja criado a instância
+
+
   
 ## Referências  
   
+*https://aws.amazon.com/cli/*
