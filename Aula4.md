@@ -50,13 +50,6 @@ Existe três formas de pagamento como instância reservada:
 
 <image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/9a7b81cf-1d81-418c-904f-1c89c1a3bf81" width="600" height="400">   
 
-- Permite o uso de servidores físicos dedicados com faturamento por host.
-- Visibilidade de soquetes, núcleos, ids de host
-- Afinidade entre um host e uma instância
-- Inserção de instâncias específica
-- Inserção de instância automática
-- Adicione capacidade usando uma solicitação de alocação  
-  
 > O Padrão da AWS é que seja multi host, então os servidores serem divididos entre várias pessoas sem que um interfira no outro, mas algumas empresas precisam de host físico dedicados apenas a elas.
 
 > Apenas o cliente poderia dedicar suas coisas no host com relação em quesito de conformidade.
@@ -70,6 +63,8 @@ Existe três formas de pagamento como instância reservada:
 - Permite o uso de servidores físicos dedicados
 - Faturamento por instância
 - Inserção de instância automática.
+  
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/86c5fd77-784d-49d7-a25b-24c59f7c3cf5" width="600" height="400">   
 
 *Spot instances*
   
@@ -84,96 +79,61 @@ Existe três formas de pagamento como instância reservada:
 
 <image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/595bae54-ba09-4507-abdb-cb192ef767f7" width="600" height="400">   
   
-Para que precisamos?
-Escabilidade automatizada
-Scale out = Adicionar instâncias
-Scale in = Remover instancias. 
-
+>Escabilidade automatizada:
+>*Scale out* que é Adicionar instâncias e
+>*Scale in* Remover instancias
 
 *AWS auto scaling Group*
 
-Você define o minimo para operar
-O máximo que ela pode chegar.
-Se também define o desejado.
-Disponível para escalionar
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/14d0b190-59da-4113-a069-a86b78afd84e" width="600" height="400">   
+  
+- Definição do mínimo, máximo e desejado disponível de escalonar para operação.
 
-Ou seja dá para fazer uma instancia que para funfar ela no mínimo necessite de 2 GB
-mas o desejado é que suba 4 GB
-O disponível para escalionar é mais 4 GB
-E o máximo que a instância pode chegar é 8GB
+> Dá para fazer uma instância funcionar no mínimo com 2 GB mas o desejado é que suba 4 GB.
+> O disponível para escalonamento é mais 4 GB e o máximo que pode chegar é 8GB.
 
-No caso imagem que sua instância tem 2 Gb, e tem 4 delas com 2 GB
+No caso que uma instância tem 2 Gb, e tem 4 delas com 2 GB, conhecido como *Health Check*, normalmente você sobe o desejado que é o 4GB acima do mínimo para facilitar, ele sempre mantém a quantidade desejada e remove quando acaba o pico mantendo apenas o desejado. Tudo isso é feito automaticamente.
+  
+> Semelhante a Netflix abrindo bem mais instância para alcançar o máximo de usuários assistindo, um ambiente elástico.
 
-Isso é chamado de Health Check.
+*Auto scaling com elastic load balancing* 
+  
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/d3ce60e2-48cb-4638-b4dc-6bba2265f92b" width="600" height="400">     
 
-Normalmente você sobe o desejado que é o 4GB acima do mínimo para facilitar, ele sempre mantém a quantidade desejada.
+Ele distribui a carga entre as instâncias.   
 
-Ele normalmente remove quando acaba o pico mantendo apenas o desejado.
+> Dicas de exame:
 
-E tudo isso é feito automaticamente.
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/3e20add7-9f2b-454f-a246-9b5d76f8a59f" width="600" height="500">   
+  
+*AWS Elastic Beanstalk*
 
-Seria semelhante a Netflix abrindo bem mais instância para alcançar o máximo de usuários assistindo, a nuvem é um ambiente elástico.
+É um serviço gerenciado pela AWS onde vai facilitar a vida do desenvolvedor caso necessite colocar no ar uma aplicação, construindo toda a infra seguindo as boas práticas.
 
-Auto scaling com elastic load balancing: Ele distribuir entre as instâncias a distribuição balanceada entre elas. 
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/0505d985-2af6-4636-9440-46a98004b606" width="600" height="400">      
 
-Dicas de exame:
-Definir uma quantidade mínima, desejável e máxima de instâncias
+> Criação da Aplicação -> Envio da Versão - Ainicia o Ambiente - Gerencia o ambiente 
 
-Realiza verificações heath check, finaliza as instâncias não saudáveis unhealthy
+> Dicas do exame:
 
-Elastic load Balancing: Dividi as requisições nas duas instâncias, para não sobrecarregar uma instância.
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/1ecf9802-2391-4497-8063-6be7618dda98" width="600" height="400">     
 
-Scaling out = Adicionar instancias
+*AWS Lambda*
+  
+Serviço *Serverless* da AWS que permite a execução de códigos sem provisionar ou gerenciar servidores, pagando apenas pelo número de solicitações e pelo tempo de computação que você utilizar.
 
-Scaling in = Tirar instancias.
+> Vamos imaginar que seja necessário executar código na nuvem, para atender um requisito que o usuário da minha aplicação faz upload de fotografias, além disso pega essa foto deixe ela menor e faça upload para outro bucket. É executar código com determinado *triggers*, neste exemplo da foto é feito quando o usuário faz upload da foto.
 
-AWS eLASTIC Beanstalk
+> A função deles é executar funções e se vai pagar o tempo para executar as funções.
 
-Aplicação no AWS, precisa se comunicar com banco de dados, boas práticas da AWS etc.
-Ele vai facilitar a vida do desenvolvedor, AWS Elastic BeansStalk serve para ajudar desenvolver que não manja nada de AWS.
-
-O Aws elastic beanstalk é um serviço gerenciado
-
-
-Criação da Aplicação -> Envio da Versão - Ainicia o Ambiente - Gerencia o ambiente 
-
-
-Dicas do exame:
-
-Serviço gerenciado e gratuito
-Plataforma como serviço PaaS
-
-Upload código arquivo 512MB ou upload via Url Bucket S3
-
-Balanceamento carga (load balancer)
-Alta disponibilidade (multi-az)
-
-
-Você planta o código e a AWS conecta serviços para subir sua aplicação
-
-
-AWS Lambda:
-Permite que você execute código sem provisionar ou gerenciar servidores, pagando pelo número de solicitações e pelo tempo de computação que você utilizar.
-
-Lambda: Vamos imaginar, que a gente precise executar código na nuvem, para atender um requisito, que o usuário da minha aplicação faz upload de fotografias de gatos, além disso pega essa foto deixe ela menor e faça upload para outra bucket. É executar código com determinado gatilhos feito, neste exemplo do gato o gatilho é quando o usuário faz upload da foto.
-
-A função deles é executar funções e se vai pagar o tempo para executar as funções.
-
-
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/0977d5d1-657d-4c29-9fc0-4d8aa01d39f3" width="600" height="400">     
+  
 Características
 
-Serveless - AWS lAMBDA - Excalável E TEM BAIXO custo
+Serveless - AWS lAMBDA - Excalável e baixo custo
 
+> Upload de Código ou edição nativa -> Dispara a função do Lambda criada -> Ativa o tempo de execução do Lambda - Se passar, há pagamento do que demorou para iniciar.
 
-Upload Código ou edição nativa -> Dispara a função do Lambda que tu criou -> Ele ativa o tmepo do lambda - Se passar pagamento do que demorou para iniciar.
+> Dicas do exame:
 
-
-Dicas do exame:
-
-Serviço serveless e gerenciado pela AWS
-
-Aws Lambda dimensiona suas aplicações
-Você pode otimizar o tempo de execução e o tamanho de memória
-Cobrança por número de solicitações de suas funções e pela duração por cada milissegundo que leva para que seu código seja executado.
-
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/458b512b-ac4f-47e1-a029-74c36e990f3f)
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/d2fe3de3-74de-470e-8016-0944a1974038" width="600" height="400">  
