@@ -2,146 +2,73 @@
 
 ## DNS, Route 53, CloudFront & ELB
 
-Route 53 
-DNS (Domain Name System)
-O amazoon route é um serviço que atua como DNS Domain Name System que encaminha as solicitações dos usuários, para os aplicatiovs de internet
-O nome Route 53 É uma referência da porta 53
-Sempre DNS É Amazon Route 53
+*Route 53* 
 
-O que é mais fácil de memorizare?
-216.238.38.120  ou Www.google.com.br
+É um serviço que atua como DNS e que encaminha as solicitações dos usuários, para os aplicatiovs de internet. O nome Route 53 É uma referência da porta 53. 
+  
+> **DNS** - *Domain Name System* é um conjunto de regras e registros que ajudam o cliente a chegar ao destino através de uma URL amigável.
 
-Então o que é o DNS
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/ca6e757c-2aad-449d-b965-61e8844a7c79" width="700" height="450">    
+  
+> O que é mais fácil de memorizar? 216.238.38.120  ou www.google.com.br
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/0aac2f23-1e44-47aa-9cae-2c439e7bd76b" width="700" height="450">
 
-É um conjunto de regras e registros que ajudam o cliente a chegar ao destino através de uma URL amigável
+*Políticas de roteamento*
+  
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/a9b22d2b-6cec-479a-b129-eb47115e94e2" width="700" height="450">
+  
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/380140b1-0afa-4964-977f-60d2c4aa80ad" width="700" height="450">  
 
-url: www.google.com  
-IP: 216.238.38.120
-Registro: A  = Ipv4
-www.google.com
-Ip 0:0:0:0:0:fff:d8ef:2678 - Ipv6
-seach.google.com: www.google.com CNAME = Hostaname para hostname
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/7a7dc27c-5326-41e6-88c7-e0eca3954fdf" width="700" height="450">
+  
+*CloudFront*
 
-exemplo.com Recurso AWS  
+É um serviço de entrega de conteúdo (CDN) que entrega dados, vídeos, aplicativos e APIS a clientes de forma mundial, com segurança, baixa latência e alta velocidade.
 
-Registro/Record
-A = IPVA
+O CloudFront usa as Regiões, Zonas de disponibilidade e Edge Locations para entregar conteúdos. Ele faz desse uso para otimizar a entrega de conteúdos.
 
-AAAA = IPv6
+Exemplo: Foi criado um bucket Se na Europa.
+         Para acessar esse bucket, há uma trajetória que o pacote teria para chegar no bucket e retornar para o usuário e pode haver latência.
 
-CNAME = Hostname para Hostname
+Cloudfront atua por meio dos Edge Locations. Se no ponto de presença não for encontrado a requisição que eu queira, ele atua buscando o dado na origem, retorna no ponto de presença, cria um cache e o retorna para mim, quando o dado que eu procuro não se encontra no ponto de presença mais próximo de mim.
 
-ALIAS = ELB, Cloudfront, S3, RDS, Etc
+Ele também otimiza a solicitação de conteúdo para aumentar o conteúdo para o usuário, fazendo requisição ser encontrada mais rápido. 
 
-CloudFront~
+> Mesmo conceito utilizado no Torrent ou do filme da Netflix ficar mais próximo em um ponto de presença, sendo que quanto mais popular mais tempo ele fica no cache.
 
-O Amazon cloudfront serviçio de entrega de conteúdo (CDN) que entrega dados, vídeos aplicaitovs e APIS a clientes de forma mundial, com segurança, baixa latência e alta velocidade
+*Laboratório CloudFront*
+ - Cloudfront: *Create Distribution*;
+ - Chose origin DOMAIN e colocamos nosso domínio de origem;
+ - Origin Access: *Origin Access control settings* recomendada;
+ - Clicar em *Create control setting*; 
+ - Não precisa colocar descrição, só clicar em create;
+ - Atualizar a política de bucket S3;
+ - Coloque a opção *default root object*;
+ - Ver qual o arquivo padrão ser retornado e colocar o index.html para retornar a página;
+ - Em *Web Application Firewall WAF*, selecionar *Do not enable security protections*, apenas colocar este só para facilitar no início. 
+ - Clicar em *Copy policy*; 
+ - Editar a política do bucket S3;
 
-Regiões Zona de disponibilidade
-Pontos de presença = Edge Locations
+Cloudfront é mais uma camada de segurança. Ele está público e buscou o S3 privado, para fazer o link e dá acesso diretamente o que você quer não ao Bucket inteiro.
+  
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/4b838c66-99a5-4592-8831-609ead812267" width="700" height="450"> 
 
-Eles são os componentes da infraestrutura da AWS, que o cloud front usa para entregar conteúdos.
+*Elastic Load Blancer*
+  
+Serviço que distribui automaticamente o tráfego de entrada de aplicativos entre diversos destinos, como instâmncias do Amazon EC2, containers, endereços IP e funções Lambda. Atua como um balanceador de carga, nas requisições dos clientes, distribuindo-as para mais de um servidor para não deixar nenhum serviço sobrecarregado. 
 
-Cloudfront usa componentes essenciais da AWS chamados de ponto de presença, para otimizar a entrega de conteúdos.
-
-Criei um bucket na Europa da S3.
-Vou acessar esse bucket, teria toda uma trajetória que seu pacote teria para chegar no bucket e retornar para o usuário.
-Teriamos uma certa latência.
-
-Cloudfront atua por meio dos pontos de presença Edge Locations
-Se no ponto de presença não for encontrado a requisição que eu queira, o Amazon cloud front vai lá busca o dado na origem, retorna no ponto de presença, manter em em cash e o retorna para mim, quando o dado que eu procuro não se encontra no ponto de presença mais próximo de mim
-
-Basicamente um serviço de cache, melhorando a experiência do usuário não precisando que a requisição vá até a origem.
-
-Cloudfront serve para otimizar a puxada de conteúdo para  aumentar o conteúdo para o usuário, fazendo requisição ser encontrada mais rápido. 
-
-Mesmo conceito utilizado em Torrent ou do filme da Netflix ficar mais próximo em um ponto de presença, sendo que quanto mais popular mais tempo ele fica no cache.
-
-Criamos um bucket no S3 para teste.
-
-Dentro desse bucket colocarei dois objetos
-Uma pagina WEB simples e um texto.html simples.
-Não coloque o link da imagem diretamente no código só suba junto.
-
-Cloudfront
-
-Create Distribution:
-
-Chose origin DOMAIN:
-Colocamos nosso domínio de origem.
-
-Origin acess:
-Origin acess control settings a recomendada.
-
-Clicamos em create control setting 
-
-Não precisamos colocar descrição, só clicamos em create.
-
-Ai precisamos atualizar a política de bucket S3 depois.
-
-COLOQUE ESSA OPÇÃO default root object
-
-Vemos qual o arquivo padrão ser retornado, ai colocamos o index.html para retornar paginal
-
-Web Application Firewall WAF
-
-Do not enable security protections, colocamos este só para da uma facilidade no início. 
-
-Clicamos em COpy policy 
-
-Ai editamos a política do bucket S3
-
-Cloudfront é mais uma camada de segurança.
-
-Cloudfront está público e buscou o S3 privado, para o link cloudFront, mas o S3 não está público.
-
-Cloudfront só dá acesso diretamente o que você quer não ao Bucket inteiro
-
-Elastic Load Blancer
-Distribuir automaticamente o tráfego de entrada de a´plicativos entre diversos destinos. Como instâmncias do Amazon EC2, conteineres, endereços IP e funções Lambda
-
-Ele é um balanceador de carga, para não deixar nenhuma instÂncia, containers ou mesmo funções de Lambda sobrecarregada.
-As requisições dos clientes é distribuída por mais de um servidor, não tendo uma sobrecarga de nenhum servidor.
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/d95ba397-8944-4644-863b-d1dea480d345" width="700" height="450">  
 
 Existem vários Elastic Load balancing 
-Application Load Balancer: HTTP, HTTPS
 
-Network Load Balancer = Atua na Camada 4, camada de transporte, TCP, 
-
-Gateway Load Balancer: Normalmente atua junto com Gneve, é um impactador que engloba diversos pacotes.
-
-Classic Load balancer
-
-Application load balancer: HTTP, HTTPS
-Camada 7
-Networkd Load balancer: TCP, UDP, TLS
-Camada 4
-Gateway load balancear: IP GENEVE porta 6081
-Camada 3
-Classic Load balancer: http, https, tcp, ssl/tls
-Camada 7  ou 4
-
-Gustavo, a Amazon tem o Elastic Container Service que executa contêineres Dockers em escala. Tem o Elastic Kubernetes Service para Kubernetes. Acho que tem mais dois que complementam eles o ECS e o Fargate.
-
-Recomendável ALB:
-Amazon EC2, conteineres, funções lambda, Endereços IP
-
-Recomendável NLB: Amazon EC2, micro serviços e conteineres.
-
-GLB:
-Ele vai encapsular os tráficos em pequenos containeres, gerenciar virtual appliance como firewalll e inespeção de pecotes, no Amazon EC3, pacotes node, etc.
-
-Configurações de Rede na ec2 da para ver as zonas de disponibilidade
-Normalmente ele fica ativo na BlackFried para não dá uma sobrecarga no sistema
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/a655b547-3602-47e6-bd05-525396f75b7c" width="700" height="450">  
   
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/f597dc13-237f-471e-91be-ede7d402efe1)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/0aac2f23-1e44-47aa-9cae-2c439e7bd76b)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/ca6e757c-2aad-449d-b965-61e8844a7c79)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/a9b22d2b-6cec-479a-b129-eb47115e94e2)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/380140b1-0afa-4964-977f-60d2c4aa80ad)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/7a7dc27c-5326-41e6-88c7-e0eca3954fdf)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/e4074593-80dd-4e5a-bfd5-0163bd7a6141)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/4b838c66-99a5-4592-8831-609ead812267)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/7b87b322-e11b-4fbb-b5d6-7ec702d3e4aa)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/d95ba397-8944-4644-863b-d1dea480d345)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/a655b547-3602-47e6-bd05-525396f75b7c)
+> Camada 7 - Aplicação , camada 4 - Transporte, camada 3 - Redes
+
+> Recomendável usar ALB em **Amazon EC2, conteineres, funções lambda, Endereços IP.**
+
+> Recomendável usar NLB em **Amazon EC2, micro serviços e conteineres.**
+
+O GLB vai encapsular os tráficos em pequenos containeres, gerenciar virtual appliance como firewalll e inespeção de pecotes, no Amazon EC3, pacotes node, etc.
+
+> Amazon também tem o Elastic Container Service que executa contêineres Dockers em escala. Tem o Elastic Kubernetes Service para Kubernetes. Acho que tem mais dois que complementam eles o ECS e o Fargate.
