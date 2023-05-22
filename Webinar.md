@@ -13,6 +13,11 @@
 <image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/41bd7987-7a74-4adb-a166-78637de6d2f3" width="900" height="500">  
  
 *Segurança* 
+
+- IAM gerencia acesso a serviços e recursos
+- Amazon Inspector avalia a segurança
+- AWS Shield mitiga ataques DDOS
+- Programas de conformidade no AWS Artifact  
   
 <image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/1403de44-e4a6-47ad-a4d1-5052d970fcbb" width="900" height="500">  
 
@@ -25,13 +30,22 @@
 <image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/50858a62-c090-49a3-bc3e-e74313d2817a" width="900" height="500">  
   
 *Tecnologias* 
-  
-<image src="" width="900" height="500">  
+
+- Definir Infraestrutura Global AWS
+- Identificar principais serviços
+- Identificar recursos para suporte
+
+> Regiões, AZ, Edge Locations, EC2, EBS, S3, EFS, RDS, VPC e networking. 
   
 *Faturamento e preço*  
+
+- Comparação e contraste de preços
+- Planos de suporte  
   
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/2b3a7e90-7b0f-45ab-8baf-97adcedd29dc)
-![image](https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/334a677e-ac30-4610-aad8-68d616b25653)
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/2b3a7e90-7b0f-45ab-8baf-97adcedd29dc" width="900" height="500">  
+
+<image src="https://github.com/deciocferreira/AWS-Fundamentals/assets/12403699/334a677e-ac30-4610-aad8-68d616b25653" width="900" height="500"> 
+
   
 
 
