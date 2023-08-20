@@ -1,3 +1,6 @@
+AWS CodeCommit
+AWS CodeCommit is a secure, highly scalable, fully managed source control service that hosts private Git repositories.
+
 AWS CodeArtifact
 AWS CodeArtifact is a fully managed artifact repository service that makes it easy for organizations of any size to securely store, publish, and share software packages used in their software development process.
 
