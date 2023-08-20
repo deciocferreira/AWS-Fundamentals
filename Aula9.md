@@ -45,6 +45,12 @@ A chave de classificação: Serve para simplificar facilitar a busca pelos dados
 >  O cliente foca em otimizar o desempenho do BD e passa a responsabilidade da gerência do Hardware para AWS.
   
 > A porta de comunicação do MYSQL: É a 3306
+
+*Outros servidor de Banco de Dados na AWS*
+
+**Amazon Neptune** supports open graph APIs for both Gremlin and SPARQL, and provides high performance for both of these graph models and their query languages.
+
+**Amazon Athena** is an interactive query service that makes it easy to analyze data directly in Amazon Simple Storage Service (Amazon S3) using standard SQL.
   
 *AWS Cloudformation*
   
