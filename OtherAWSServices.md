@@ -21,4 +21,7 @@ AWS Systems Manager allows you to centralize operational data from multiple AWS 
 Amazon Transcribe – Speech to Text - AWS.
 
 AWS Global Accelerator
-AWS Global Accelerator always routes user traffic to the optimal endpoint based on performance, reacting instantly to changes in application health, your user's location, and policies that you configure.
+AWS Global Accelerator always routes user traffic to the optimal endpoint based on performance, reacting instantly to changes in application 
+
+
+AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser.
