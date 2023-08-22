@@ -28,3 +28,7 @@ AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets y
 
 Tape Gateway
 Tape Gateway is a cloud-based Virtual Tape Library (VTL). It presents your backup application with a VTL interface, consisting of a media changer and tape drives. You can create virtual tapes in your virtual tape library using the AWS Management Console.
+
+AWS Outposts Family
+AWS Outposts Family overview
+Outposts solutions allow you to extend and run native AWS services on premises, and is available in a variety of form factors, from 1U and 2U Outposts servers to 42U Outposts racks, and multiple rack deployments.
