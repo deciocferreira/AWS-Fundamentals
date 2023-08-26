@@ -2,7 +2,7 @@
 
 ## **Excelência operacional**
 
-Se concentra na execução e monitoramento sistemas e na melhoria contínua de processos e procedimentos. Os principais tópicos incluem automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias.
+Se concentra na execução e monitoramento de sistemas e na melhoria contínua de processos e procedimentos. Os principais tópicos incluem automação de alterações, reação a eventos e definição de padrões para gerenciar as operações diárias.
 
 *Design Principles*
 
