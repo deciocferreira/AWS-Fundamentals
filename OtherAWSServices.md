@@ -47,3 +47,6 @@ Amazon CodeGuru Profiler helps developers find an application's most expensive l
 
 Como funciona o Amazon Kinesis?
 O Amazon Kinesis permite executar análises em tempo real de dados que antes eram analisados usando processamento de lotes. Os casos de uso comuns de streaming incluem compartilhamento de dados entre diferentes aplicativos, streaming extract-transform-load e análises em tempo real.
+
+AWS Storage Gateway
+AWS Storage Gateway is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage
